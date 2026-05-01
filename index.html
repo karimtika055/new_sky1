@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>موقع شركة كريم تيكا | الرسمي</title>
+        <!-- استدعاء مكتبة الأيقونات (السر في هذا السطر) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <style>
+            /* 1. إعدادات الهوية البصرية (متغيرات CSS) */
+            :root {
+                --primary: #1a2a6c;
+                /* أزرق داكن احترافي */
+                --accent: #3498db;
+                /* أزرق فاتح مميز */
+                --bg: #f4f4f4;
+                /* لون خلفية الصفحة */
+                --text-dark: #333;
+                /* لون النص الأساسي */
+                --text-light: #fff;
+                /* لون النص الفاتح (للفوتر) */
+                --white: #ffffff;
+                --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* 2. الإعدادات العامة للمتصفح */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, sans-serif;
+            }
+
+            body {
+                background-color: var(--bg);
+                color: var(--text-dark);
+                line-height: 1.6;
+            }
+
+            /* 3. شريط التنقل (Header & Navigation) */
+            header {
+                background: var(--white);
+                padding: 15px 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 4px solid var(--primary);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            }
+
+            /* تنسيق الشعار مع الصورة */
+            .logo-area {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .company-logo {
+                width: 50px;
+                height: 50px;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+
+            /* حجم الصورة */
+            .logo-area h2 {
+                color: var(--primary);
+            }
+
+            .nav-links a {
+                margin-right: 25px;
+                text-decoration: none;
+                color: var(--text-dark);
+                font-weight: bold;
+            }
+
+            .nav-links a:hover {
+                color: var(--accent);
+            }
+
+            /* 4. هيكل الصفحة الرئيسي (المحتوى + الشريط الجانبي) */
+            .container {
+                display: flex;
+                max-width: 1200px;
+                margin: 40px auto;
+                gap: 30px;
+                padding: 0 20px;
+            }
+
+            /* المحتوى الأساسي */
+            .main-content {
+                flex: 3;
+                background: var(--white);
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+            }
+
+            .main-content h1 {
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+
+            .main-content h2 {
+                color: var(--accent);
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+
+            .main-content p {
+                color: #555;
+            }
+
+            /* الشريط الجانبي (Sidebar Sticky) */
+            .sidebar {
+                flex: 1;
+            }
+
+            .sticky-box {
+                position: sticky;
+                top: 30px;
+            }
+
+            /* الشريط اللاصق */
+            .widget {
+                background: var(--white);
+                padding: 25px;
+                border-radius: 12px;
+                border: 1px solid #eee;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                margin-bottom: 25px;
+            }
+
+            .widget h3 {
+                color: var(--primary);
+                margin-bottom: 15px;
+                border-bottom: 2px solid var(--bg);
+                padding-bottom: 8px;
+            }
+
+            .widget p {
+                font-size: 0.95em;
+                color: #666;
+            }
+
+            .services-list {
+                list-style: none;
+            }
+
+            .services-list li {
+                margin-bottom: 10px;
+                font-weight: 500;
+                color: #444;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* تلوين علامة الصح */
+            .services-list li i {
+                color: #27ae60;
+            }
+
+            /* 5. التذييل (Footer المنظم) */
+            footer {
+                background: var(--primary);
+                color: var(--text-light);
+                padding: 60px 50px;
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+            }
+
+            footer h4 {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 10px;
+            }
+
+            footer p,
+            footer a {
+                font-size: 0.9em;
+                color: #ccc;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            footer a:hover {
+                color: var(--white);
+            }
+
+            /* 6. التجاوب (Mobile Responsive) */
+            @media (max-width: 768px) {
+                /* جعل الحاوية تأخذ عرض الشاشة بالكامل */
+                .container {
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 0 10px;
+                    gap: 20px;
+                }
+
+                /* ضبط الهيدر ليناسب الموبايل */
+                header {
+                    padding: 15px;
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                /* جعل الروابط تظهر بشكل عرضي أو منسق */
+                .nav-links {
+                    display: flex;
+                    flex-wrap: wrap; /* للسماح بالعناصر بالنزول لسطر جديد لو الشاشة صغيرة جداً */
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 15px;
+                }
+
+                .nav-links a {
+                    margin: 0 5px;
+                    font-size: 14px; /* تصغير الخط قليلاً ليناسب العرض */
+                }
+
+                /* جعل المحتوى الأساسي والجانبي بعرض كامل */
+                .main-content, .sidebar {
+                    flex: none;
+                    width: 100%;
+                }
+
+                .main-content {
+                    padding: 20px; /* تقليل الحواف الداخلية للموبايل */
+                }
+
+                /* ضبط الفوتر ليناسب الشاشات الصغيرة */
+                footer {
+                    padding: 40px 20px;
+                    text-align: center;
+                }
+
+                footer div {
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo-area">
+                <img src="image/New_sky.png" alt="شعار كريم تيكا" class="company-logo">
+                <h2>كريم تيكا</h2>
+            </div>
+            <nav class="nav-links">
+                <a href="home.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="services.html"><i class="fas fa-laptop-code"></i> خدماتنا</a>
+                <a href="Gallery.html"><i class="fas fa-project-diagram"></i> معرض المشاريع</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <article class="main-content">
+                <h1><i class="fas fa-rocket"></i> مرحباً بكم في شركتنا</h1>
+                <p>نحن نعمل بجد لتحويل أفكاركم إلى واقع رقمي ملموس. نقدم أفضل الحلول البرمجية المتطورة باستخدام أحدث
+                    التقنيات لضمان نجاح أعمالكم.</p>
+                <br>
+                <h2><i class="fas fa-star"></i> لماذا تختارنا؟</h2>
+                <p>لأننا نجمع بين الخبرة التقنية العميقة والرؤية الإبداعية. نهتم بكل تفصيلة في الكود وتصميم الواجهات
+                    لضمان أفضل أداء وتجربة مستخدم لمشروعك.</p>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sticky-box">
+                    <div class="widget">
+                        <h3><i class="fas fa-info-circle"></i> معلومات الشركة</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>المقر:</strong> القاهرة، مصر</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعات العمل:</strong> 9ص - 5م (الأحد - الخميس)</p>
+                    </div>
+                    <div class="widget">
+                        <h3><i class="fas fa-bolt"></i> خدماتنا السريعة</h3>
+                        <ul class="services-list">
+                            <li><i class="fas fa-check-circle"></i> تطوير ويب (ASP.NET Core)</li>
+                            <li><i class="fas fa-check-circle"></i> تصميم واجهات (UI/UX)</li>
+                            <li><i class="fas fa-check-circle"></i> استشارات تقنية</li>
+                            <li><i class="fas fa-check-circle"></i> صيانة ودعم فني</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div>
+                <h4>تواصل معنا</h4>
+                <p><i class="fas fa-map-marker-alt"></i> العنوان: القاهرة، مصر</p>
+                <p><i class="fas fa-envelope"></i> info@karimtika.com</p>
+                <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+            </div>
+            <div>
+                <h4>نبذة عنا</h4>
+                <p>كريم تيكا شركة رائدة في الحلول البرمجية المتكاملة، نركز على جودة الكود واحترافية التصميم.</p>
+            </div>
+            <div>
+                <h4>خريطة الموقع</h4>
+                <a href="services.html"><i class="fas fa-chevron-left"></i> حول الشركة</a>
+                <a href="mode.html"><i class="fas fa-chevron-left"></i> المدونة</a>
+                <a href="team.html"><i class="fas fa-chevron-left"></i> فريق العمل</a>
+            </div>
+            <div>
+                <h4>جميع الحقوق محفوظة</h4>
+                <p>جميع الحقوق محفوظة &copy; 2026</p>
+                <p>شركة كريم تيكا</p>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

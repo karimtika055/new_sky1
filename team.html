@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>فريق العمل - New Sky</title>
+          <style>
+               /* 1. إعدادات الصفحة العامة */
+               body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background-color: #f8f9fa;
+                    margin: 0;
+                    padding: 50px 20px;
+               }
+
+               .team-section {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    text-align: center;
+               }
+
+               .team-section h2 {
+                    font-size: 36px;
+                    color: #2c3e50;
+                    margin-bottom: 10px;
+               }
+
+               .team-section p.subtitle {
+                    color: #7f8c8d;
+                    margin-bottom: 50px;
+               }
+
+               /* 2. حاوية الفريق (الشبكة) */
+               .team-grid {
+                    display: grid;
+                    /* عرض 4 صور في الصف الواحد للشاشات الكبيرة */
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 30px;
+                    padding: 10px;
+               }
+
+               /* 3. كارت الشخص الواحد */
+               .team-card {
+                    background: #fff;
+                    border-radius: 1px;
+                    overflow: hidden;
+                    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                    transition: all 0.3s ease;
+                    border-bottom: 4px solid transparent;
+               }
+
+               .team-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+                    border-bottom: 4px solid #12bd6d;
+                    /* لونك الأخضر المميز */
+               }
+
+               /* صورة الشخص */
+               .member-img {
+                    width: 90%;
+                    height: 420px;
+                    overflow: hidden;
+               }
+
+               .member-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.10s ease;
+               }
+
+               .team-card:hover .member-img img {
+                    transform: scale(1.1);
+                    /* تكبير بسيط للصورة عند المرور عليها */
+               }
+
+               /* معلومات الشخص */
+               .member-info {
+                    padding: 20px;
+               }
+
+               .member-info h3 {
+                    margin: 0 0 5px;
+                    color: #2c3e50;
+                    font-size: 20px;
+               }
+
+               .member-info span {
+                    color: #12bd6d;
+                    font-weight: bold;
+                    font-size: 14px;
+                    display: block;
+                    margin-bottom: 15px;
+               }
+
+               .social-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+               }
+
+               .social-links a {
+                    color: #bdc3c7;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: 0.3s;
+               }
+
+               .social-links a:hover {
+                    color: #2c3e50;
+               }
+
+               /* زر العودة */
+               .btn-back {
+                    display: inline-block;
+                    margin-top: 50px;
+                    padding: 10px 25px;
+                    background-color: #12bd6d;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+               }
+          </style>
+     </head>
+
+     <body>
+
+          <section class="team-section">
+               <h2>فريق العمل</h2>
+               <p class="subtitle">نحن مجموعة من المبدعين والخبراء نسعى لتقديم الأفضل دائماً</p>
+
+               <div class="team-grid">
+
+                    <!-- العضو الأول -->
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/ahmed.png" alt="كريم تيكا">
+                         </div>
+                         <div class="member-info">
+                              <h3>كريم تيكا</h3>
+                              <span>المؤسس والمدير التنفيذي</span>
+                              <div class="social-links">
+                                   <a href="#">FB</a>
+                                   <a href="#">LN</a>
+                                   <a href="#">TW</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- العضو الثاني -->
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/shaimaa.png" alt="اسم الموظف">
+                         </div>
+                         <div class="member-info">
+                              <h3>أحمد علي</h3>
+                              <span>مطور واجهات الموقع</span>
+                              <div class="social-links">
+                                   <a href="#">FB</a>
+                                   <a href="#">LN</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- العضو الثالث -->
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/alaa.png" alt="اسم الموظفة">
+                         </div>
+                         <div class="member-info">
+                              <h3>سارة محمد</h3>
+                              <span>مصممة جرافيك</span>
+                              <div class="social-links">
+                                   <a href="#">LN</a>
+                                   <a href="#">BE</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- العضو الرابع -->
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/haidy.png" alt="اسم الموظف">
+                         </div>
+                         <div class="member-info">
+                              <h3>محمود حسن</h3>
+                              <span>مدير التسويق</span>
+                              <div class="social-links">
+                                   <a href="#">FB</a>
+                                   <a href="#">TW</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/esam.png" alt="اسم الموظف">
+                         </div>
+                         <div class="member-info">
+                              <h3>محمود حسن</h3>
+                              <span>مدير التسويق</span>
+                              <div class="social-links">
+                                   <a href="#">FB</a>
+                                   <a href="#">TW</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="team-card">
+                         <div class="member-img">
+                              <img src="image/ehab.png" alt="اسم الموظف">
+                         </div>
+                         <div class="member-info">
+                              <h3>محمود حسن</h3>
+                              <span>مدير التسويق</span>
+                              <div class="social-links">
+                                   <a href="#">FB</a>
+                                   <a href="#">TW</a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+
+               <a href="index.html" class="btn-back">العودة للرئيسية</a>
+          </section>
+
+     </body>
+
+</html>

@@ -1,0 +1,174 @@
+x<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+               /* إعدادات عامة */
+               body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 0;
+                    overflow-x: hidden;
+               }
+
+               /* 1. قسم الواجهة الأساسي (Hero Section) */
+               .hero {
+                    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                         url('image/New_sky.png');
+                    /* تأكد من مسار الصورة */
+                    background-size: cover;
+                    background-position: center;
+                    height: 90vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: white;
+                    padding: 0 20px;
+               }
+
+               .hero h1 {
+                    font-size: 48px;
+                    margin-bottom: 20px;
+                    animation: fadeInUp 1s ease;
+               }
+
+               .hero p {
+                    font-size: 20px;
+                    max-width: 700px;
+                    margin-bottom: 30px;
+                    opacity: 0.9;
+               }
+
+               .cta-button {
+                    padding: 15px 40px;
+                    background-color: #12bd6d;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    transition: 0.3s;
+                    box-shadow: 0 5px 15px rgba(18, 189, 109, 0.4);
+               }
+
+               .cta-button:hover {
+                    transform: scale(1.05);
+                    background-color: #0ea35d;
+               }
+
+               /* 2. قسم "لماذا نحن" (Features Section) */
+               .why-us {
+                    padding: 80px 20px;
+                    background-color: #ffffff;
+                    text-align: center;
+               }
+
+               .why-us h2 {
+                    font-size: 36px;
+                    margin-bottom: 50px;
+                    color: #2c3e50;
+               }
+
+               .features-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 30px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+               }
+
+               .feature-item {
+                    padding: 30px;
+                    border-radius: 20px;
+                    background: #f9f9f9;
+                    transition: 0.3s;
+                    border: 1px solid #eee;
+               }
+
+               .feature-item:hover {
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    background: #fff;
+                    transform: translateY(-5px);
+               }
+
+               .feature-icon {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    display: block;
+               }
+
+               .feature-item h3 {
+                    color: #12bd6d;
+                    margin-bottom: 15px;
+               }
+
+               .feature-item p {
+                    color: #666;
+                    line-height: 1.6;
+               }
+
+               /* حركات الأنيميشن */
+               @keyframes fadeInUp {
+                    from {
+                         opacity: 0;
+                         transform: translateY(30px);
+                    }
+
+                    to {
+                         opacity: 1;
+                         transform: translateY(0);
+                    }
+               }
+
+               /* التجاوب مع الموبايل */
+               @media (max-width: 768px) {
+                    .hero h1 {
+                         font-size: 32px;
+                    }
+
+                    .hero p {
+                         font-size: 16px;
+                    }
+               }
+          </style>
+     </head>
+
+     <body>
+
+          <section class="hero">
+               <h1>مستقبلك الرقمي يبدأ من هنا</h1>
+               <p>نحن في New Sky ندمج الإبداع بالتكنولوجيا لنقدم لك أفضل المواقع والحلول البرمجية والهندسة الصوتية.</p>
+               <a href="services.html" class="cta-button">اكتشف خدماتنا</a>
+          </section>
+
+          <section class="why-us">
+               <h2>لماذا تختار New Sky؟</h2>
+               <div class="features-grid">
+
+                    <div class="feature-item">
+                         <span class="feature-icon">🚀</span>
+                         <h3>سرعة التنفيذ</h3>
+                         <p>نحن ندرك قيمة الوقت، لذا نلتزم بتسليم مشاريعك في الموعد المحدد وبأعلى كفاءة.</p>
+                    </div>
+
+                    <div class="feature-item">
+                         <span class="feature-icon">💎</span>
+                         <h3>جودة عالمية</h3>
+                         <p>نستخدم أحدث التقنيات البرمجية ونتبع معايير التصميم الحديثة لضمان تميزك.</p>
+                    </div>
+
+                    <div class="feature-item">
+                         <span class="feature-icon">🛡️</span>
+                         <h3>دعم مستمر</h3>
+                         <p>فريقنا معك دائماً، نوفر لك صيانة ودعم فني لضمان استقرار أعمالك على المدى البعيد.</p>
+                    </div>
+
+               </div>
+          </section>
+
+     </body>
+
+</html>

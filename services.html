@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>خدماتنا - New Sky</title>
+          <style>
+               /* إعدادات الخلفية والألوان */
+               body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                    /* خلفية متدرجة ناعمة */
+                    margin: 0;
+                    padding: 50px 20px;
+                    min-height: 100vh;
+               }
+
+               .services-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    text-align: center;
+               }
+
+               .services-container h1 {
+                    color: #2c3e50;
+                    margin-bottom: 10px;
+                    font-size: 3rem;
+               }
+
+               .services-container p.subtitle {
+                    color: #555;
+                    margin-bottom: 50px;
+                    font-size: 1.1rem;
+               }
+
+               /* شبكة الخدمات */
+               .services-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 30px;
+               }
+
+               /* كارت الخدمة الإبداعي */
+               .service-card {
+                    background: rgba(255, 255, 255, 0.7);
+                    /* خلفية بيضاء شفافة */
+                    backdrop-filter: blur(10px);
+                    /* تأثير الزجاج المضبب */
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    padding: 40px;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+               }
+
+               .service-card:hover {
+                    transform: translateY(-15px);
+                    background: rgba(255, 255, 255, 0.9);
+                    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+               }
+
+               /* أيقونات الخدمات (استخدمت حروف كرموز مؤقتة) */
+               .service-icon {
+                    font-size: 50px;
+                    color: #12bd6d;
+                    /* لونك الأخضر المفضل */
+                    margin-bottom: 20px;
+                    display: inline-block;
+               }
+
+               .service-card h3 {
+                    color: #2c3e50;
+                    font-size: 24px;
+                    margin-bottom: 15px;
+               }
+
+               .service-card p {
+                    color: #666;
+                    line-height: 1.7;
+                    font-size: 16px;
+               }
+
+               /* خط التزيين السفلي */
+               .service-card::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 5px;
+                    background: #12bd6d;
+                    /* */
+                    transition: width 0.4s ease;
+               }
+
+               .service-card:hover::after {
+                    width: 100%;
+               }
+
+               /* زر العودة */
+               .back-home {
+                    margin-top: 60px;
+                    display: inline-block;
+                    padding: 15px 40px;
+                    background: #12bd6d;
+                    /* */
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    box-shadow: 0 5px 15px rgba(18, 189, 109, 0.3);
+                    transition: 0.3s;
+               }
+
+               .back-home:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 25px rgba(18, 189, 109, 0.5);
+               }
+          </style>
+     </head>
+
+     <body>
+
+          <div class="services-container">
+               <h1>خدماتنا الإبداعية</h1>
+               <p class="subtitle">نقدم حلولاً رقمية تجمع بين الفن والبرمجة الاحترافية</p>
+
+               <div class="services-grid">
+
+                    <div class="service-card">
+                         <div class="service-icon">🌐</div>
+                         <h3>تطوير المواقع</h3>
+                         <p>نصمم ونبني مواقع سريعة ومتجاوبة بأحدث التقنيات مثل ASP.NET لضمان أفضل أداء لمشروعك.</p>
+                    </div>
+
+                    <div class="service-card">
+                         <div class="service-icon">🎨</div>
+                         <h3>تصميم UI/UX</h3>
+                         <p>خلق تجربة مستخدم فريدة وواجهات جذابة تريح العين وتجعل التنقل في موقعك تجربة ممتعة.</p>
+                    </div>
+
+                    <div class="service-card">
+                         <div class="service-icon">🎧</div>
+                         <h3>الإنتاج الصوتي</h3>
+                         <p>بفضل خبرتنا فيMixing وMastering، نوفر لك جودة صوتية عالمية لمحتواك الرقمي والفيديوهات.</p>
+                    </div>
+
+               </div>
+
+               <a href="index.html" class="back-home">العودة للرئيسية</a>
+          </div>
+
+     </body>
+
+</html>
